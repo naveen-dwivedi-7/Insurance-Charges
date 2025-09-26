@@ -29,18 +29,6 @@ A Flask web application to predict **insurance charges** using a **Gradient Boos
 
 ---
 
-## Project Structure
-
-## insurance-charges-app/
-│
-├─ app.py # Main Flask application
-├─ best_gradient_boosting_model.joblib # Trained model
-├─ templates/
-│ ├─ index.html # Input form
-│ └─ result.html # Prediction result
-├─ static/ # Optional static files
-└─ README.md # Project documentation
-
 ## Running the App Locally
 
 Run the Flask application:
