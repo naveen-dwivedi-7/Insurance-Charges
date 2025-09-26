@@ -31,7 +31,7 @@ A Flask web application to predict **insurance charges** using a **Gradient Boos
 
 ## Project Structure
 
-insurance-charges-app/
+## insurance-charges-app/
 │
 ├─ app.py # Main Flask application
 ├─ best_gradient_boosting_model.joblib # Trained model
