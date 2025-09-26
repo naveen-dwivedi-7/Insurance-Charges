@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Charges Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function changeBackground() {
+            const colors = ['#FFCDD2','#F8BBD0','#E1BEE7','#D1C4E9','#C5CAE9','#BBDEFB','#B2EBF2','#C8E6C9','#DCEDC8','#FFF9C4'];
+            setInterval(() => {
+                document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            }, 1000);
+        }
+    </script>
+</head>
+<body onload="changeBackground()">
+
+    <div class="badge">Naveen Dwivedi</div>
+
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="bg-white bg-opacity-90 p-10 rounded-3xl shadow-lg w-full max-w-lg">
+            <h1 class="text-3xl font-bold text-center mb-6">Insurance Charges Prediction</h1>
+            <form action="/predict" method="POST" class="space-y-4">
+                <input type="hidden" name="manual" value="yes">
+                
+                <input type="number" name="age" placeholder="Age" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                
+                <select name="sex" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                    <option value="">Select Sex</option>
+                    <option value="1">Male</option>
+                    <option value="0">Female</option>
+                </select>
+                
+                <input type="number" name="bmi" placeholder="BMI" step="0.1" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                
+                <input type="number" name="children" placeholder="Number of Children" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                
+    
+                <select name="smoker" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                    <option value="">Smoker?</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+                
+                <select name="region" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                    <option value="">Select Region</option>
+                    <option value="northwest">Northwest</option>
+                    <option value="northeast">Northeast</option>
+                    <option value="southwest">Southwest</option>
+                    <option value="southeast">Southeast</option>
+                </select>
+
+                <button type="submit" class="w-full p-3 bg-purple-600 text-white font-bold rounded-lg hover:bg-purple-700 transition">Predict</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
