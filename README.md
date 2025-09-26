@@ -1,7 +1,6 @@
 # Insurance Charges Prediction Web App
 
-A Flask web application to predict **insurance charges** using a **Gradient Boosting Regressor** model. The app allows manual input and displays predicted charges in both **USD and INR**. It includes a dynamic background and a badge with the author name, **Naveen Dwivedi**.
-
+A Flask web application to predict **insurance charges** using a **Gradient Boosting Regressor** model. The app allows manual input and displays predicted charges in both **USD and INR**.
 ---
 
 ## Features
@@ -52,6 +51,10 @@ python app.py
 ## Open your browser and go to:
 
 http://127.0.0.1:5000/
+
+## Project Demo Link:
+
+https://insurance-charges.onrender.com/
 
 
 ## Deployment on Render
